@@ -18,7 +18,7 @@ let delete_array = []
 
 
 function show_value(){
-
+    if(input_text.value !== ''){
     const para = document.createElement('p');
     const del_btn = document.createElement('button');
     del_btn.className = 'delete_btn'
@@ -72,7 +72,7 @@ function show_value(){
         done_task_audio.play();
     }
     
-    
+    }
 }
 
 function delete_task(val){
