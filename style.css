@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'VT323', monospace;
+
+color: white;
+
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(28, 28, 28);
+    position: relative;
+
+}
+.second_main{
+    position: absolute;
+    transform: translate(-50% , -50%);
+
+    top:50%;
+    left: 50%;
+ 
+}
+.app_name{
+    font-size: 60px;
+    text-align: center;
+}
+.app_intro{
+    font-size: 30px;
+    text-align: center;
+    
+}
+.app_text{
+    font-size: 25px;
+    text-align: center;
+}
+.input_text{
+    width: 100%;
+    font-size: 40px;
+    background-color: rgb(53, 53, 53);
+}
+.button_div{
+    text-align: center;
+}
+.add_task_button{
+    font-size:50px;
+    padding: 10px 30px;
+    background-color: #ffb900;
+    color: black;
+    margin-top: 15px;
+    text-shadow: 4px 4px white;
+    border-radius: 4px ;
+    box-shadow: 4px 4px white;
+}
+.add_task_button:active{
+    box-shadow: none;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: -10px;
+    
+}
+.task_bar{
+    display:flex;
+    margin-top: 50px;
+    flex-direction: row;
+
+}
+.show_value{
+    display: flex;
+    font-size: 50px;
+    flex-direction: column;
+}
+
+.show_del_btn{
+    white-space: pre;
+    display: flex;
+    flex-direction: column;
+    
+}
+.show_done_btn{
+    display: flex;
+    flex-direction: column;
+}
+.delete_btn{
+    font-size: 30px;
+    padding: 5px 5px;
+    background-color: rgb(53, 53, 53);
+}
+.done_btn{ 
+    font-size: 30px;
+    padding: 5px 20px;
+    background-color: rgb(53, 53, 53);
+}
