@@ -75,8 +75,11 @@ function show_value(){
         done_task_audio.play();
     }
     
+
 }
-}
+
+    }
+
 
 function delete_task(val){
     task_array.forEach(function (item , index){
