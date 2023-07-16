@@ -18,8 +18,10 @@ let delete_array = []
 
 
 function show_value(){
-
+    if(input_text.value !== ''){
     const para = document.createElement('p');
+    
+
     const del_btn = document.createElement('button');
     del_btn.className = 'delete_btn'
     
@@ -55,9 +57,10 @@ function show_value(){
         
         
         
-        show_task.appendChild(para_array[i]);
+        show_task.appendChild(para_array[i]) ;
         show_del_btn.appendChild(delete_array[i]);
         show_done_btn.appendChild(done_array[i]);
+
 
     }
 
@@ -72,7 +75,7 @@ function show_value(){
         done_task_audio.play();
     }
     
-    
+}
 }
 
 function delete_task(val){
@@ -86,12 +89,6 @@ function delete_task(val){
             show_task.innerHTML ='';
             show_del_btn.innerHTML = '';
             show_done_btn.innerHTML = '';
-
-            
-
-            
-
-
 
 
             
