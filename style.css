@@ -66,16 +66,19 @@ color: white;
     
 }
 .task_bar{
-    display:flex;
     margin-top: 50px;
-    flex-direction: row;
-    align-items: center;
+ 
 
 }
 .show_value{
     display: flex;
     font-size: 50px;
     flex-direction: column;
+}
+.para_td{
+    display: flex;
+    align-items: center;
+
 }
 
 .show_del_btn{
@@ -95,7 +98,7 @@ color: white;
 }
 .done_btn{ 
     font-size: 30px;
-    padding: 5px 20px;
+    padding: 5px 10px;
     background-color: rgb(53, 53, 53);
 }
 
@@ -191,7 +194,7 @@ color: white;
     }
     .done_btn{ 
         font-size: 22px;
-        padding: 5px 20px;
+        padding: 5px 10px;
         background-color: rgb(53, 53, 53);
     }
     
@@ -238,7 +241,7 @@ color: white;
     }
     .done_btn{ 
         font-size: 18px;
-        padding: 3px 15px;
+        padding: 3px 8px;
         background-color: rgb(53, 53, 53);
     }
     
@@ -291,7 +294,7 @@ color: white;
     }
     .done_btn{ 
         font-size: 16px;
-        padding: 2px 10px;
+        padding: 2px 5px;
         background-color: rgb(53, 53, 53);
     }
     
@@ -344,7 +347,7 @@ color: white;
     }
     .done_btn{ 
         font-size: 16px;
-        padding: 2px 10px;
+        padding: 2px 5px;
         background-color: rgb(53, 53, 53);
     }
     
@@ -397,7 +400,7 @@ color: white;
     }
     .done_btn{ 
         font-size: 14px;
-        padding: 1px 5px;
+        padding: 1px 3px;
         background-color: rgb(53, 53, 53);
     }
     

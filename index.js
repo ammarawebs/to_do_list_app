@@ -12,22 +12,37 @@ let task_detail = {}
 let para_array = []
 let done_array = []
 let delete_array = []
+let para_li_array = []
+
+
+
+
 
 
 
 
 
 function show_value(){
+
+
     if(input_text.value !== ''){
+
+    
     const para = document.createElement('p');
+    const para_td = document.createElement('li');
+    para_td.className = 'para_td'
     
 
     const del_btn = document.createElement('button');
     del_btn.className = 'delete_btn'
     
     
+    
     const done_btn = document.createElement('button');
     done_btn.className = 'done_btn'
+    
+
+
     let input_value = input_text.value;
 
     add_task_audio.play();
@@ -38,10 +53,23 @@ function show_value(){
         delete : ' 🗑️ ',
         done : ' ✔️ '
     })
+
+
     para_array.push(para)
     delete_array.push(del_btn)
     done_array.push(done_btn)
+
+    para_td.setAttribute('id', 'para_td'+ (para_array.length-1))
+   
+
     
+
+    para_li_array.push(para_td)
+
+    show_task.appendChild(para_li_array[para_array.length-1])
+
+    
+
     input_text.value = ''
 
 
@@ -54,12 +82,20 @@ function show_value(){
         done_array[i].innerHTML = task_array[i].done;
         delete_array[i].setAttribute('id', i)
         done_array[i].setAttribute( 'id' , i)
+
+
+        para_li_array[i].append(delete_array[i], done_array[i], para_array[i])
+        show_task.appendChild(para_li_array[i]) 
+        // show_del_btn.appendChild(del_td_array[i])
+        // show_done_btn.appendChild(done_td_array[i]);
+
+        console.log(para_li_array[i])
+   
         
+      
         
+
         
-        show_task.appendChild(para_array[i]) ;
-        show_del_btn.appendChild(delete_array[i]);
-        show_done_btn.appendChild(done_array[i]);
 
 
     }
@@ -88,10 +124,10 @@ function delete_task(val){
             para_array.splice(val, 1);
             delete_array.splice(val , 1);
             done_array.splice(val, 1);
+            para_li_array.splice(val, 1)
 
             show_task.innerHTML ='';
-            show_del_btn.innerHTML = '';
-            show_done_btn.innerHTML = '';
+          
 
 
             
@@ -101,10 +137,15 @@ function delete_task(val){
                 done_array[i].innerHTML = task_array[i].done;
                 delete_array[i].setAttribute('id', i)
                 done_array[i].setAttribute( 'id' , i)
+
+
+                para_li_array[i].append(delete_array[i], done_array[i], para_array[i])
+                show_task.appendChild(para_li_array[i]) 
+
+                console.log(para_li_array)
                      
-                show_task.appendChild(para_array[i]);
-                show_del_btn.appendChild(delete_array[i]);
-                show_done_btn.appendChild(done_array[i]);
+                // document.getElementById('para_td'+i).append(delete_array[i], done_array[i], para_array[i])
+                // show_task.appendChild(para_li_array[i]) 
             }
 
 
